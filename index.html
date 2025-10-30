@@ -62,15 +62,29 @@
                     </div>
                     <span class="text-2xl font-bold gradient-text">BlockEdu</span>
                 </div>
-                <div class="hidden md:flex gap-8">
-                    <a href="#why-web3" class="hover:text-neon-green transition">Por que Web3?</a>
-                    <a href="#how-it-works" class="hover:text-neon-green transition">Como Funciona</a>
-                    <a href="#advantages" class="hover:text-neon-green transition">Vantagens</a>
-                    <a href="#contact" class="hover:text-neon-green transition">Contato</a>
+                
+                <!-- Mobile Language Selector -->
+                <div class="md:hidden flex bg-dark-blue/50 rounded-lg border border-neon-green/30 overflow-hidden">
+                    <button id="lang-pt-mobile" class="px-3 py-1 text-sm font-semibold transition bg-neon-green text-black">PT</button>
+                    <button id="lang-en-mobile" class="px-3 py-1 text-sm font-semibold transition hover:bg-neon-green/20">EN</button>
                 </div>
-                <a href="#contact" class="bg-neon-green text-black px-6 py-2 rounded-lg font-semibold hover:bg-neon-green/90 transition">
-                    Começar
-                </a>
+                
+                <div class="hidden md:flex gap-8">
+                    <a href="#why-web3" class="hover:text-neon-green transition" data-pt="Por que Web3?" data-en="Why Web3?">Por que Web3?</a>
+                    <a href="#how-it-works" class="hover:text-neon-green transition" data-pt="Como Funciona" data-en="How It Works">Como Funciona</a>
+                    <a href="#advantages" class="hover:text-neon-green transition" data-pt="Vantagens" data-en="Advantages">Vantagens</a>
+                    <a href="#contact" class="hover:text-neon-green transition" data-pt="Contato" data-en="Contact">Contato</a>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                    <!-- Language Selector -->
+                    <div class="flex bg-dark-blue/50 rounded-lg border border-neon-green/30 overflow-hidden">
+                        <button id="lang-pt" class="px-3 py-1 text-sm font-semibold transition bg-neon-green text-black">PT</button>
+                        <button id="lang-en" class="px-3 py-1 text-sm font-semibold transition hover:bg-neon-green/20">EN</button>
+                    </div>
+                    <a href="#contact" class="bg-neon-green text-black px-6 py-2 rounded-lg font-semibold hover:bg-neon-green/90 transition" data-pt="Começar" data-en="Get Started">
+                        Começar
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -85,21 +99,21 @@
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-block mb-6 px-4 py-2 bg-neon-green/10 border border-neon-green/30 rounded-full">
-                <span class="text-neon-green text-sm font-semibold">Powered by Solana Blockchain</span>
+                <span class="text-neon-green text-sm font-semibold" data-pt="Powered by Solana Blockchain" data-en="Powered by Solana Blockchain">Powered by Solana Blockchain</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span class="gradient-text">BlockEdu</span><br/>
-                <span class="text-white">Simplicidade e validade.</span><br/>
-                <span class="text-neon-green glow-green">Certifique o futuro.</span>
+                <span class="text-white" data-pt="Simplicidade e validade." data-en="Simplicity and validity.">Simplicidade e validade.</span><br/>
+                <span class="text-neon-green glow-green" data-pt="Certifique o futuro." data-en="Certify the future.">Certifique o futuro.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto" data-pt="Certificados educacionais verificados na blockchain. Transparência, segurança e reconhecimento global para sua jornada de aprendizado." data-en="Educational certificates verified on blockchain. Transparency, security and global recognition for your learning journey.">
                 Certificados educacionais verificados na blockchain. Transparência, segurança e reconhecimento global para sua jornada de aprendizado.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-neon-green text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/90 transition border-glow">
+                <a href="#contact" class="bg-neon-green text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/90 transition border-glow" data-pt="Solicitar Demo" data-en="Request Demo">
                     Solicitar Demo
                 </a>
-                <a href="#how-it-works" class="bg-transparent border-2 border-neon-green text-neon-green px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/10 transition">
+                <a href="#how-it-works" class="bg-transparent border-2 border-neon-green text-neon-green px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/10 transition" data-pt="Como Funciona" data-en="How It Works">
                     Como Funciona
                 </a>
             </div>
@@ -111,9 +125,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Por que <span class="gradient-text">Web3</span>?
+                    <span data-pt="Por que" data-en="Why"></span>Por que</span> <span class="gradient-text">Web3</span>?
                 </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto" data-pt="A blockchain revoluciona a forma como certificamos e validamos conhecimento" data-en="Blockchain revolutionizes how we certify and validate knowledge">
                     A blockchain revoluciona a forma como certificamos e validamos conhecimento
                 </p>
             </div>
@@ -125,8 +139,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Imutabilidade</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green" data-pt="Imutabilidade" data-en="Immutability">Imutabilidade</h3>
+                    <p class="text-gray-300" data-pt="Certificados registrados na blockchain não podem ser alterados ou falsificados, garantindo autenticidade permanente." data-en="Certificates registered on blockchain cannot be altered or forged, ensuring permanent authenticity.">
                         Certificados registrados na blockchain não podem ser alterados ou falsificados, garantindo autenticidade permanente.
                     </p>
                 </div>
@@ -137,8 +151,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Descentralização</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green" data-pt="Descentralização" data-en="Decentralization">Descentralização</h3>
+                    <p class="text-gray-300" data-pt="Sem intermediários. Seus certificados pertencem a você e podem ser verificados por qualquer pessoa, em qualquer lugar." data-en="No intermediaries. Your certificates belong to you and can be verified by anyone, anywhere.">
                         Sem intermediários. Seus certificados pertencem a você e podem ser verificados por qualquer pessoa, em qualquer lugar.
                     </p>
                 </div>
@@ -149,8 +163,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Velocidade</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green" data-pt="Velocidade" data-en="Speed">Velocidade</h3>
+                    <p class="text-gray-300" data-pt="Emissão e verificação instantâneas na rede Solana. Sem burocracias, sem esperas, sem custos elevados." data-en="Instant issuance and verification on Solana network. No bureaucracy, no waiting, no high costs.">
                         Emissão e verificação instantâneas na rede Solana. Sem burocracias, sem esperas, sem custos elevados.
                     </p>
                 </div>
@@ -163,9 +177,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Como <span class="gradient-text">Funciona</span>
+                    <span data-pt="Como" data-en="How It">Como</span> <span class="gradient-text" data-pt="Funciona" data-en="Works">Funciona</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-xl text-gray-400" data-pt="Processo simples e transparente em 3 etapas" data-en="Simple and transparent process in 3 steps">
                     Processo simples e transparente em 3 etapas
                 </p>
             </div>
@@ -181,8 +195,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center">Emissão</h3>
-                        <p class="text-gray-300 text-center">
+                        <h3 class="text-2xl font-bold mb-4 text-center" data-pt="Emissão" data-en="Issuance">Emissão</h3>
+                        <p class="text-gray-300 text-center" data-pt="A instituição emite o certificado com dados do aluno, curso e competências adquiridas." data-en="The institution issues the certificate with student data, course and acquired competencies.">
                             A instituição emite o certificado com dados do aluno, curso e competências adquiridas.
                         </p>
                     </div>
@@ -198,8 +212,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center">Registro</h3>
-                        <p class="text-gray-300 text-center">
+                        <h3 class="text-2xl font-bold mb-4 text-center" data-pt="Registro" data-en="Registration">Registro</h3>
+                        <p class="text-gray-300 text-center" data-pt="O certificado é registrado na blockchain Solana, gerando um hash único e imutável." data-en="The certificate is registered on Solana blockchain, generating a unique and immutable hash.">
                             O certificado é registrado na blockchain Solana, gerando um hash único e imutável.
                         </p>
                     </div>
@@ -215,8 +229,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-center">Verificação</h3>
-                        <p class="text-gray-300 text-center">
+                        <h3 class="text-2xl font-bold mb-4 text-center" data-pt="Verificação" data-en="Verification">Verificação</h3>
+                        <p class="text-gray-300 text-center" data-pt="Qualquer pessoa pode verificar a autenticidade do certificado instantaneamente via blockchain." data-en="Anyone can verify the certificate's authenticity instantly via blockchain.">
                             Qualquer pessoa pode verificar a autenticidade do certificado instantaneamente via blockchain.
                         </p>
                     </div>
@@ -230,9 +244,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Para <span class="gradient-text">Quem É</span>
+                    <span data-pt="Para" data-en="Who It's">Para</span> <span class="gradient-text" data-pt="Quem É" data-en="For">Quem É</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-xl text-gray-400" data-pt="Soluções para diferentes necessidades educacionais" data-en="Solutions for different educational needs">
                     Soluções para diferentes necessidades educacionais
                 </p>
             </div>
@@ -244,8 +258,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Comunidades Tech</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4" data-pt="Comunidades Tech" data-en="Tech Communities">Comunidades Tech</h3>
+                    <p class="text-gray-300" data-pt="Grupos de Python, JavaScript, blockchain e outras tecnologias que promovem workshops e cursos." data-en="Python, JavaScript, blockchain and other technology groups that promote workshops and courses.">
                         Grupos de Python, JavaScript, blockchain e outras tecnologias que promovem workshops e cursos.
                     </p>
                 </div>
@@ -256,8 +270,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Escolas Técnicas</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4" data-pt="Escolas Técnicas" data-en="Technical Schools">Escolas Técnicas</h3>
+                    <p class="text-gray-300" data-pt="Instituições de ensino que buscam modernizar seus processos de certificação com tecnologia blockchain." data-en="Educational institutions seeking to modernize their certification processes with blockchain technology.">
                         Instituições de ensino que buscam modernizar seus processos de certificação com tecnologia blockchain.
                     </p>
                 </div>
@@ -268,8 +282,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Organizadores de Eventos</h3>
-                    <p class="text-gray-300">
+                    <h3 class="text-2xl font-bold mb-4" data-pt="Organizadores de Eventos" data-en="Event Organizers">Organizadores de Eventos</h3>
+                    <p class="text-gray-300" data-pt="Hackathons, bootcamps e conferências que desejam emitir certificados verificáveis para participantes." data-en="Hackathons, bootcamps and conferences that want to issue verifiable certificates to participants.">
                         Hackathons, bootcamps e conferências que desejam emitir certificados verificáveis para participantes.
                     </p>
                 </div>
@@ -282,32 +296,32 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    <span class="gradient-text">Vantagens</span> Competitivas
+                    <span class="gradient-text" data-pt="Vantagens" data-en="Competitive">Vantagens</span> <span data-pt="Competitivas" data-en="Advantages">Competitivas</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-xl text-gray-400" data-pt="Tecnologia de ponta para certificação educacional" data-en="Cutting-edge technology for educational certification">
                     Tecnologia de ponta para certificação educacional
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
-                    <h3 class="text-xl font-bold mb-2">Segurança</h3>
-                    <p class="text-gray-400 text-sm">
+                    <h3 class="text-xl font-bold mb-2" data-pt="Segurança" data-en="Security">Segurança</h3>
+                    <p class="text-gray-400 text-sm" data-pt="Criptografia de nível militar e registro imutável na blockchain Solana." data-en="Military-grade encryption and immutable registration on Solana blockchain.">
                         Criptografia de nível militar e registro imutável na blockchain Solana.
                     </p>
                 </div>
                 
                 <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
-                    <h3 class="text-xl font-bold mb-2">Transparência</h3>
-                    <p class="text-gray-400 text-sm">
+                    <h3 class="text-xl font-bold mb-2" data-pt="Transparência" data-en="Transparency">Transparência</h3>
+                    <p class="text-gray-400 text-sm" data-pt="Todos os registros são públicos e auditáveis por qualquer pessoa." data-en="All records are public and auditable by anyone.">
                         Todos os registros são públicos e auditáveis por qualquer pessoa.
                     </p>
                 </div>
                 
                 <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
                     <div class="text-neon-green text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-bold mb-2">Escalabilidade</h3>
-                    <p class="text-gray-400 text-sm">
+                    <h3 class="text-xl font-bold mb-2" data-pt="Escalabilidade" data-en="Scalability">Escalabilidade</h3>
+                    <p class="text-gray-400 text-sm" data-pt="Milhares de certificados por segundo com custos mínimos de transação." data-en="Thousands of certificates per second with minimal transaction costs.">
                         Milhares de certificados por segundo com custos mínimos de transação.
                     </p>
                 </div>
@@ -315,7 +329,7 @@
                 <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
                     <div class="text-neon-green text-4xl mb-4">🐍</div>
                     <h3 class="text-xl font-bold mb-2">Python Integration</h3>
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-sm" data-pt="SDK em Python para fácil integração com sistemas educacionais existentes." data-en="Python SDK for easy integration with existing educational systems.">
                         SDK em Python para fácil integração com sistemas educacionais existentes.
                     </p>
                 </div>
@@ -328,9 +342,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-deep-blue/50 backdrop-blur-sm rounded-3xl border-2 border-neon-green/30 p-12 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                    O <span class="gradient-text">Mercado</span> Está Crescendo
+                    <span data-pt="O" data-en="The">O</span> <span class="gradient-text" data-pt="Mercado" data-en="Market">Mercado</span> <span data-pt="Está Crescendo" data-en="Is Growing">Está Crescendo</span>
                 </h2>
-                <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" data-pt="O mercado global de certificações digitais está em expansão exponencial" data-en="The global digital certification market is in exponential expansion">
                     O mercado global de certificações digitais está em expansão exponencial
                 </p>
                 
@@ -339,20 +353,20 @@
                         <div class="text-5xl md:text-6xl font-bold text-neon-green mb-4 glow-green">
                             $350M
                         </div>
-                        <p class="text-xl text-gray-300">Mercado em 2024</p>
+                        <p class="text-xl text-gray-300" data-pt="Mercado em 2024" data-en="Market in 2024">Mercado em 2024</p>
                     </div>
                     
                     <div class="bg-black/50 p-8 rounded-2xl border border-neon-green/20">
                         <div class="text-5xl md:text-6xl font-bold text-neon-green mb-4 glow-green">
                             $6.52B
                         </div>
-                        <p class="text-xl text-gray-300">Projeção para 2032</p>
+                        <p class="text-xl text-gray-300" data-pt="Projeção para 2032" data-en="Projection for 2032">Projeção para 2032</p>
                     </div>
                 </div>
                 
                 <div class="mt-12">
                     <p class="text-2xl font-semibold text-neon-green">
-                        Crescimento de <span class="text-4xl glow-green">1,763%</span> em 8 anos
+                        <span data-pt="Crescimento de" data-en="Growth of">Crescimento de</span> <span class="text-4xl glow-green">1,763%</span> <span data-pt="em 8 anos" data-en="in 8 years">em 8 anos</span>
                     </p>
                 </div>
             </div>
@@ -364,9 +378,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Veja em <span class="gradient-text">Ação</span>
+                    <span data-pt="Veja em" data-en="See in">Veja em</span> <span class="gradient-text" data-pt="Ação" data-en="Action">Ação</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-xl text-gray-400" data-pt="Demonstração completa do sistema BlockEdu" data-en="Complete demonstration of BlockEdu system">
                     Demonstração completa do sistema BlockEdu
                 </p>
             </div>
@@ -380,10 +394,10 @@
                                     <path d="M8 5v14l11-7z"/>
                                 </svg>
                             </div>
-                            <p class="text-gray-400 text-lg">
+                            <p class="text-gray-400 text-lg" data-pt="Incorpore seu vídeo explicativo aqui" data-en="Embed your explanatory video here">
                                 Incorpore seu vídeo explicativo aqui
                             </p>
-                            <p class="text-gray-500 text-sm mt-2">
+                            <p class="text-gray-500 text-sm mt-2" data-pt="(YouTube, Vimeo ou arquivo de vídeo)" data-en="(YouTube, Vimeo or video file)">
                                 (YouTube, Vimeo ou arquivo de vídeo)
                             </p>
                         </div>
@@ -407,9 +421,9 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                    Entre em <span class="gradient-text">Contato</span>
+                    <span data-pt="Entre em" data-en="Get in">Entre em</span> <span class="gradient-text" data-pt="Contato" data-en="Touch">Contato</span>
                 </h2>
-                <p class="text-xl text-gray-400">
+                <p class="text-xl text-gray-400" data-pt="Instituições interessadas, vamos conversar sobre o futuro da certificação" data-en="Interested institutions, let's talk about the future of certification">
                     Instituições interessadas, vamos conversar sobre o futuro da certificação
                 </p>
             </div>
@@ -417,18 +431,20 @@
             <form class="bg-deep-blue/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border-2 border-neon-green/30">
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-neon-green">Nome da Instituição</label>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green" data-pt="Nome da Instituição" data-en="Institution Name">Nome da Instituição</label>
                         <input 
                             type="text" 
                             class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            data-pt="Ex: Universidade Tech" data-en="Ex: Tech University"
                             placeholder="Ex: Universidade Tech"
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-neon-green">Nome do Responsável</label>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green" data-pt="Nome do Responsável" data-en="Contact Person Name">Nome do Responsável</label>
                         <input 
                             type="text" 
                             class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            data-pt="Seu nome" data-en="Your name"
                             placeholder="Seu nome"
                         />
                     </div>
@@ -444,7 +460,7 @@
                         />
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold mb-2 text-neon-green">Telefone</label>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green" data-pt="Telefone" data-en="Phone">Telefone</label>
                         <input 
                             type="tel" 
                             class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
@@ -454,23 +470,24 @@
                 </div>
                 
                 <div class="mb-6">
-                    <label class="block text-sm font-semibold mb-2 text-neon-green">Tipo de Instituição</label>
+                    <label class="block text-sm font-semibold mb-2 text-neon-green" data-pt="Tipo de Instituição" data-en="Institution Type">Tipo de Instituição</label>
                     <select class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition">
-                        <option>Selecione...</option>
-                        <option>Comunidade Tech</option>
-                        <option>Escola Técnica</option>
+                        <option data-pt="Selecione..." data-en="Select...">Selecione...</option>
+                        <option data-pt="Comunidade Tech" data-en="Tech Community">Comunidade Tech</option>
+                        <option data-pt="Escola Técnica" data-en="Technical School">Escola Técnica</option>
                         <option>Bootcamp</option>
-                        <option>Universidade</option>
-                        <option>Organizador de Eventos</option>
-                        <option>Outro</option>
+                        <option data-pt="Universidade" data-en="University">Universidade</option>
+                        <option data-pt="Organizador de Eventos" data-en="Event Organizer">Organizador de Eventos</option>
+                        <option data-pt="Outro" data-en="Other">Outro</option>
                     </select>
                 </div>
                 
                 <div class="mb-8">
-                    <label class="block text-sm font-semibold mb-2 text-neon-green">Mensagem</label>
+                    <label class="block text-sm font-semibold mb-2 text-neon-green" data-pt="Mensagem" data-en="Message">Mensagem</label>
                     <textarea 
                         rows="5" 
                         class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition resize-none"
+                        data-pt="Conte-nos sobre suas necessidades de certificação..." data-en="Tell us about your certification needs..."
                         placeholder="Conte-nos sobre suas necessidades de certificação..."
                     ></textarea>
                 </div>
@@ -478,6 +495,7 @@
                 <button 
                     type="submit" 
                     class="w-full bg-neon-green text-black font-bold py-4 rounded-lg hover:bg-neon-green/90 transition text-lg border-glow"
+                    data-pt="Solicitar Demonstração" data-en="Request Demonstration"
                 >
                     Solicitar Demonstração
                 </button>
@@ -496,7 +514,7 @@
                     <span class="text-2xl font-bold gradient-text">BlockEdu</span>
                 </div>
                 
-                <p class="text-gray-400 text-center">
+                <p class="text-gray-400 text-center" data-pt="© 2025 BlockEdu. Certificando o futuro com blockchain." data-en="© 2025 BlockEdu. Certifying the future with blockchain.">
                     © 2025 BlockEdu. Certificando o futuro com blockchain.
                 </p>
                 
@@ -520,6 +538,84 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'pt';
+        
+        const langPtBtn = document.getElementById('lang-pt');
+        const langEnBtn = document.getElementById('lang-en');
+        const langPtMobileBtn = document.getElementById('lang-pt-mobile');
+        const langEnMobileBtn = document.getElementById('lang-en-mobile');
+        
+        function updateButtonStyles(lang) {
+            const buttons = [
+                { pt: langPtBtn, en: langEnBtn },
+                { pt: langPtMobileBtn, en: langEnMobileBtn }
+            ];
+            
+            buttons.forEach(buttonSet => {
+                if (lang === 'pt') {
+                    if (buttonSet.pt) {
+                        buttonSet.pt.classList.add('bg-neon-green', 'text-black');
+                        buttonSet.pt.classList.remove('hover:bg-neon-green/20');
+                    }
+                    if (buttonSet.en) {
+                        buttonSet.en.classList.remove('bg-neon-green', 'text-black');
+                        buttonSet.en.classList.add('hover:bg-neon-green/20');
+                    }
+                } else {
+                    if (buttonSet.en) {
+                        buttonSet.en.classList.add('bg-neon-green', 'text-black');
+                        buttonSet.en.classList.remove('hover:bg-neon-green/20');
+                    }
+                    if (buttonSet.pt) {
+                        buttonSet.pt.classList.remove('bg-neon-green', 'text-black');
+                        buttonSet.pt.classList.add('hover:bg-neon-green/20');
+                    }
+                }
+            });
+        }
+        
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update button styles
+            updateButtonStyles(lang);
+            
+            // Update all text elements
+            const elements = document.querySelectorAll(`[data-${lang}]`);
+            elements.forEach(element => {
+                const newText = element.getAttribute(`data-${lang}`);
+                
+                // Handle different element types
+                if (element.tagName === 'INPUT' && element.type !== 'submit') {
+                    element.placeholder = newText;
+                } else if (element.tagName === 'TEXTAREA') {
+                    element.placeholder = newText;
+                } else if (element.tagName === 'OPTION') {
+                    element.textContent = newText;
+                } else if (element.tagName === 'BUTTON' || element.tagName === 'A') {
+                    element.textContent = newText;
+                } else {
+                    element.textContent = newText;
+                }
+            });
+            
+            // Store preference
+            localStorage.setItem('blockedu-lang', lang);
+        }
+        
+        // Event listeners
+        if (langPtBtn) langPtBtn.addEventListener('click', () => switchLanguage('pt'));
+        if (langEnBtn) langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        if (langPtMobileBtn) langPtMobileBtn.addEventListener('click', () => switchLanguage('pt'));
+        if (langEnMobileBtn) langEnMobileBtn.addEventListener('click', () => switchLanguage('en'));
+        
+        // Load saved language preference or default to Portuguese
+        const savedLang = localStorage.getItem('blockedu-lang') || 'pt';
+        switchLanguage(savedLang);
+    </script>
 
 </body>
 </html>
