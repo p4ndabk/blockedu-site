@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlockEdu - Certificados Educacionais na Blockchain</title>
+    <title>BlockEdu - Certifique o Futuro na Blockchain</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-green': '#00ff88',
+                        'dark-blue': '#0a1628',
+                        'deep-blue': '#0f2744',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        * {
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        body {
             font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .glow-green {
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+        
+        .border-glow {
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
         }
         
         .gradient-text {
@@ -18,10 +38,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        
-        .glow {
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
         }
         
         .card-hover {
@@ -32,86 +48,110 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
         }
-
-        .lang-btn {
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn.active {
-            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-            color: #000;
-        }
     </style>
 </head>
 <body class="bg-black text-white">
     
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+    <nav class="fixed w-full bg-dark-blue/80 backdrop-blur-lg z-50 border-b border-neon-green/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="text-2xl font-bold gradient-text">BlockEdu</div>
-                <div class="flex items-center gap-6">
-                    <div class="hidden md:flex gap-6">
-                        <a href="#how" class="hover:text-green-400 transition" data-i18n="nav.how">Como Funciona</a>
-                        <a href="#for-who" class="hover:text-green-400 transition" data-i18n="nav.forWho">Para Quem</a>
-                        <a href="#advantages" class="hover:text-green-400 transition" data-i18n="nav.advantages">Vantagens</a>
-                        <a href="#contact" class="hover:text-green-400 transition" data-i18n="nav.contact">Contato</a>
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-neon-green/20 rounded-lg flex items-center justify-center border border-neon-green/40">
+                        <span class="text-neon-green text-xl font-bold">B</span>
                     </div>
-                    <!-- Language Switcher -->
-                    <div class="flex gap-2 ml-4 border-l border-gray-700 pl-4">
-                        <button onclick="switchLanguage('pt')" class="lang-btn active px-3 py-1 rounded-md text-sm font-medium" id="lang-pt">PT</button>
-                        <button onclick="switchLanguage('en')" class="lang-btn px-3 py-1 rounded-md text-sm font-medium bg-gray-800" id="lang-en">EN</button>
-                    </div>
+                    <span class="text-2xl font-bold gradient-text">BlockEdu</span>
                 </div>
+                <div class="hidden md:flex gap-8">
+                    <a href="#why-web3" class="hover:text-neon-green transition">Por que Web3?</a>
+                    <a href="#how-it-works" class="hover:text-neon-green transition">Como Funciona</a>
+                    <a href="#advantages" class="hover:text-neon-green transition">Vantagens</a>
+                    <a href="#contact" class="hover:text-neon-green transition">Contato</a>
+                </div>
+                <a href="#contact" class="bg-neon-green text-black px-6 py-2 rounded-lg font-semibold hover:bg-neon-green/90 transition">
+                    Começar
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-green-900/20"></div>
-        <div class="max-w-7xl mx-auto text-center relative z-10">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-gradient-to-br from-dark-blue via-black to-deep-blue"></div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-neon-green rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-6 px-4 py-2 bg-neon-green/10 border border-neon-green/30 rounded-full">
+                <span class="text-neon-green text-sm font-semibold">Powered by Solana Blockchain</span>
+            </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span class="gradient-text" data-i18n="hero.title">BlockEdu</span>
+                <span class="gradient-text">BlockEdu</span><br/>
+                <span class="text-white">Simplicidade e validade.</span><br/>
+                <span class="text-neon-green glow-green">Certifique o futuro.</span>
             </h1>
-            <p class="text-xl md:text-3xl mb-8 text-gray-300" data-i18n="hero.subtitle">
-                Simplicidade e validade. Certifique o futuro.
+            <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                Certificados educacionais verificados na blockchain. Transparência, segurança e reconhecimento global para sua jornada de aprendizado.
             </p>
-            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12" data-i18n="hero.description">
-                Certificados educacionais verificados na blockchain da Solana. Transparência, segurança e validade global para sua formação.
-            </p>
-            <a href="#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-black font-bold rounded-lg text-lg hover:scale-105 transition glow" data-i18n="hero.cta">
-                Comece Agora
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-neon-green text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/90 transition border-glow">
+                    Solicitar Demo
+                </a>
+                <a href="#how-it-works" class="bg-transparent border-2 border-neon-green text-neon-green px-8 py-4 rounded-lg font-bold text-lg hover:bg-neon-green/10 transition">
+                    Como Funciona
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Why Web3 Section -->
-    <section class="py-20 px-4 bg-gradient-to-b from-black to-blue-950/20">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text" data-i18n="web3.title">
-                Por que Web3?
-            </h2>
+    <section id="why-web3" class="py-24 bg-gradient-to-b from-black to-dark-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Por que <span class="gradient-text">Web3</span>?
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    A blockchain revoluciona a forma como certificamos e validamos conhecimento
+                </p>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-4xl mb-4">🔗</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="web3.card1.title">Descentralização</h3>
-                    <p class="text-gray-400" data-i18n="web3.card1.description">
-                        Seus certificados não dependem de uma única instituição. Eles existem na blockchain, acessíveis para sempre.
+                <div class="bg-deep-blue/50 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 card-hover">
+                    <div class="w-16 h-16 bg-neon-green/20 rounded-xl flex items-center justify-center mb-6 border border-neon-green/40">
+                        <svg class="w-8 h-8 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Imutabilidade</h3>
+                    <p class="text-gray-300">
+                        Certificados registrados na blockchain não podem ser alterados ou falsificados, garantindo autenticidade permanente.
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-4xl mb-4">👁️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="web3.card2.title">Transparência</h3>
-                    <p class="text-gray-400" data-i18n="web3.card2.description">
-                        Qualquer pessoa pode verificar a autenticidade de um certificado em segundos, sem intermediários.
+                
+                <div class="bg-deep-blue/50 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 card-hover">
+                    <div class="w-16 h-16 bg-neon-green/20 rounded-xl flex items-center justify-center mb-6 border border-neon-green/40">
+                        <svg class="w-8 h-8 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Descentralização</h3>
+                    <p class="text-gray-300">
+                        Sem intermediários. Seus certificados pertencem a você e podem ser verificados por qualquer pessoa, em qualquer lugar.
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-4xl mb-4">🚀</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="web3.card3.title">Inovação</h3>
-                    <p class="text-gray-400" data-i18n="web3.card3.description">
-                        Tecnologia de ponta que coloca a educação no futuro digital, com custos baixos e velocidade alta.
+                
+                <div class="bg-deep-blue/50 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 card-hover">
+                    <div class="w-16 h-16 bg-neon-green/20 rounded-xl flex items-center justify-center mb-6 border border-neon-green/40">
+                        <svg class="w-8 h-8 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-neon-green">Velocidade</h3>
+                    <p class="text-gray-300">
+                        Emissão e verificação instantâneas na rede Solana. Sem burocracias, sem esperas, sem custos elevados.
                     </p>
                 </div>
             </div>
@@ -119,69 +159,118 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how" class="py-20 px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text" data-i18n="how.title">
-                Como Funciona
-            </h2>
+    <section id="how-it-works" class="py-24 bg-dark-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Como <span class="gradient-text">Funciona</span>
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Processo simples e transparente em 3 etapas
+                </p>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-black">
-                        1
+                <div class="relative">
+                    <div class="bg-black/50 p-8 rounded-2xl border-2 border-neon-green/30 card-hover">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center font-bold text-black text-xl border-4 border-dark-blue">
+                            1
+                        </div>
+                        <div class="mb-6 mt-4">
+                            <svg class="w-16 h-16 text-neon-green mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Emissão</h3>
+                        <p class="text-gray-300 text-center">
+                            A instituição emite o certificado com dados do aluno, curso e competências adquiridas.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="how.step1.title">Emissão</h3>
-                    <p class="text-gray-400" data-i18n="how.step1.description">
-                        A instituição emite o certificado com dados do aluno e curso via Python SDK
-                    </p>
                 </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-black">
-                        2
+                
+                <div class="relative">
+                    <div class="bg-black/50 p-8 rounded-2xl border-2 border-neon-green/30 card-hover">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center font-bold text-black text-xl border-4 border-dark-blue">
+                            2
+                        </div>
+                        <div class="mb-6 mt-4">
+                            <svg class="w-16 h-16 text-neon-green mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Registro</h3>
+                        <p class="text-gray-300 text-center">
+                            O certificado é registrado na blockchain Solana, gerando um hash único e imutável.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="how.step2.title">Blockchain</h3>
-                    <p class="text-gray-400" data-i18n="how.step2.description">
-                        O certificado é registrado na blockchain Solana de forma imutável e permanente
-                    </p>
                 </div>
-                <div class="text-center">
-                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center text-3xl font-bold text-black">
-                        3
+                
+                <div class="relative">
+                    <div class="bg-black/50 p-8 rounded-2xl border-2 border-neon-green/30 card-hover">
+                        <div class="absolute -top-4 -left-4 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center font-bold text-black text-xl border-4 border-dark-blue">
+                            3
+                        </div>
+                        <div class="mb-6 mt-4">
+                            <svg class="w-16 h-16 text-neon-green mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Verificação</h3>
+                        <p class="text-gray-300 text-center">
+                            Qualquer pessoa pode verificar a autenticidade do certificado instantaneamente via blockchain.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="how.step3.title">Verificação</h3>
-                    <p class="text-gray-400" data-i18n="how.step3.description">
-                        Qualquer pessoa pode verificar a autenticidade instantaneamente via QR code ou ID
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- For Who Section -->
-    <section id="for-who" class="py-20 px-4 bg-gradient-to-b from-black to-green-950/20">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text" data-i18n="forWho.title">
-                Para Quem É
-            </h2>
+    <!-- Who It's For Section -->
+    <section id="who-its-for" class="py-24 bg-gradient-to-b from-dark-blue to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Para <span class="gradient-text">Quem É</span>
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Soluções para diferentes necessidades educacionais
+                </p>
+            </div>
+            
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-4">🐍</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="forWho.card1.title">Comunidades Tech</h3>
-                    <p class="text-gray-400" data-i18n="forWho.card1.description">
-                        Grupos de Python, JavaScript, Web3 e outras tecnologias que oferecem cursos e workshops
+                <div class="bg-deep-blue/30 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 text-center card-hover">
+                    <div class="w-20 h-20 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-neon-green/40">
+                        <svg class="w-10 h-10 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Comunidades Tech</h3>
+                    <p class="text-gray-300">
+                        Grupos de Python, JavaScript, blockchain e outras tecnologias que promovem workshops e cursos.
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-4">🎓</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="forWho.card2.title">Escolas Técnicas</h3>
-                    <p class="text-gray-400" data-i18n="forWho.card2.description">
-                        Instituições de ensino que buscam modernizar seus certificados com tecnologia blockchain
+                
+                <div class="bg-deep-blue/30 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 text-center card-hover">
+                    <div class="w-20 h-20 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-neon-green/40">
+                        <svg class="w-10 h-10 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Escolas Técnicas</h3>
+                    <p class="text-gray-300">
+                        Instituições de ensino que buscam modernizar seus processos de certificação com tecnologia blockchain.
                     </p>
                 </div>
-                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 card-hover">
-                    <div class="text-5xl mb-4">🎪</div>
-                    <h3 class="text-2xl font-bold mb-4 text-green-400" data-i18n="forWho.card3.title">Organizadores de Eventos</h3>
-                    <p class="text-gray-400" data-i18n="forWho.card3.description">
-                        Bootcamps, hackathons e conferências que querem certificar participantes de forma inovadora
+                
+                <div class="bg-deep-blue/30 backdrop-blur-sm p-8 rounded-2xl border border-neon-green/20 text-center card-hover">
+                    <div class="w-20 h-20 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-neon-green/40">
+                        <svg class="w-10 h-10 text-neon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Organizadores de Eventos</h3>
+                    <p class="text-gray-300">
+                        Hackathons, bootcamps e conferências que desejam emitir certificados verificáveis para participantes.
                     </p>
                 </div>
             </div>
@@ -189,38 +278,45 @@
     </section>
 
     <!-- Advantages Section -->
-    <section id="advantages" class="py-20 px-4">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text" data-i18n="advantages.title">
-                Vantagens
-            </h2>
+    <section id="advantages" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="gradient-text">Vantagens</span> Competitivas
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Tecnologia de ponta para certificação educacional
+                </p>
+            </div>
+            
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-green-500/30 card-hover">
-                    <div class="text-4xl mb-4">🔒</div>
-                    <h3 class="text-xl font-bold mb-2 text-green-400" data-i18n="advantages.card1.title">Segurança</h3>
-                    <p class="text-gray-400 text-sm" data-i18n="advantages.card1.description">
-                        Impossível falsificar ou alterar certificados registrados na blockchain
+                <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
+                    <h3 class="text-xl font-bold mb-2">Segurança</h3>
+                    <p class="text-gray-400 text-sm">
+                        Criptografia de nível militar e registro imutável na blockchain Solana.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-green-500/30 card-hover">
-                    <div class="text-4xl mb-4">✨</div>
-                    <h3 class="text-xl font-bold mb-2 text-green-400" data-i18n="advantages.card2.title">Transparência</h3>
-                    <p class="text-gray-400 text-sm" data-i18n="advantages.card2.description">
-                        Verificação pública e instantânea sem necessidade de contato com a instituição
+                
+                <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
+                    <h3 class="text-xl font-bold mb-2">Transparência</h3>
+                    <p class="text-gray-400 text-sm">
+                        Todos os registros são públicos e auditáveis por qualquer pessoa.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-green-500/30 card-hover">
-                    <div class="text-4xl mb-4">📈</div>
-                    <h3 class="text-xl font-bold mb-2 text-green-400" data-i18n="advantages.card3.title">Escalabilidade</h3>
-                    <p class="text-gray-400 text-sm" data-i18n="advantages.card3.description">
-                        Emita milhares de certificados com custos mínimos usando Solana
+                
+                <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
+                    <div class="text-neon-green text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">Escalabilidade</h3>
+                    <p class="text-gray-400 text-sm">
+                        Milhares de certificados por segundo com custos mínimos de transação.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-green-500/30 card-hover">
-                    <div class="text-4xl mb-4">🐍</div>
-                    <h3 class="text-xl font-bold mb-2 text-green-400" data-i18n="advantages.card4.title">Python SDK</h3>
-                    <p class="text-gray-400 text-sm" data-i18n="advantages.card4.description">
-                        Integração simples com Python para desenvolvedores e educadores
+                
+                <div class="bg-gradient-to-br from-deep-blue/50 to-black/50 p-6 rounded-xl border border-neon-green/20 card-hover">
+                    <div class="text-neon-green text-4xl mb-4">🐍</div>
+                    <h3 class="text-xl font-bold mb-2">Python Integration</h3>
+                    <p class="text-gray-400 text-sm">
+                        SDK em Python para fácil integração com sistemas educacionais existentes.
                     </p>
                 </div>
             </div>
@@ -228,270 +324,202 @@
     </section>
 
     <!-- Market Section -->
-    <section class="py-20 px-4 bg-gradient-to-b from-black to-blue-950/30">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text" data-i18n="market.title">
-                Mercado em Crescimento
-            </h2>
-            <div class="bg-gray-900/50 backdrop-blur-sm p-12 rounded-2xl border border-gray-800">
-                <p class="text-2xl md:text-3xl mb-6 text-gray-300" data-i18n="market.description">
-                    O mercado global de certificações digitais deve crescer de
+    <section id="market" class="py-24 bg-gradient-to-b from-black to-dark-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-deep-blue/50 backdrop-blur-sm rounded-3xl border-2 border-neon-green/30 p-12 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    O <span class="gradient-text">Mercado</span> Está Crescendo
+                </h2>
+                <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    O mercado global de certificações digitais está em expansão exponencial
                 </p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-6">
-                    <div>
-                        <div class="text-5xl md:text-6xl font-bold text-green-400">$350M</div>
-                        <div class="text-gray-400 mt-2" data-i18n="market.year1">2024</div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-black/50 p-8 rounded-2xl border border-neon-green/20">
+                        <div class="text-5xl md:text-6xl font-bold text-neon-green mb-4 glow-green">
+                            $350M
+                        </div>
+                        <p class="text-xl text-gray-300">Mercado em 2024</p>
                     </div>
-                    <div class="text-4xl text-green-400">→</div>
-                    <div>
-                        <div class="text-5xl md:text-6xl font-bold text-green-400">$6.52B</div>
-                        <div class="text-gray-400 mt-2" data-i18n="market.year2">2032</div>
+                    
+                    <div class="bg-black/50 p-8 rounded-2xl border border-neon-green/20">
+                        <div class="text-5xl md:text-6xl font-bold text-neon-green mb-4 glow-green">
+                            $6.52B
+                        </div>
+                        <p class="text-xl text-gray-300">Projeção para 2032</p>
                     </div>
                 </div>
-                <p class="text-gray-400" data-i18n="market.cagr">
-                    Taxa de crescimento anual composta (CAGR) de 44.2%
-                </p>
+                
+                <div class="mt-12">
+                    <p class="text-2xl font-semibold text-neon-green">
+                        Crescimento de <span class="text-4xl glow-green">1,763%</span> em 8 anos
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Demo Section -->
-    <section class="py-20 px-4">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-8 gradient-text" data-i18n="demo.title">
-                Veja Como Funciona
-            </h2>
-            <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800">
-                <div class="aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
-                    <!-- Replace with actual video embed -->
-                    <div class="text-center">
-                        <div class="text-6xl mb-4">▶️</div>
-                        <p class="text-gray-400" data-i18n="demo.placeholder">Vídeo demonstrativo em breve</p>
+    <section id="demo" class="py-24 bg-dark-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Veja em <span class="gradient-text">Ação</span>
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Demonstração completa do sistema BlockEdu
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="relative bg-black/50 rounded-2xl border-2 border-neon-green/30 overflow-hidden aspect-video">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-neon-green/40">
+                                <svg class="w-12 h-12 text-neon-green" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-400 text-lg">
+                                Incorpore seu vídeo explicativo aqui
+                            </p>
+                            <p class="text-gray-500 text-sm mt-2">
+                                (YouTube, Vimeo ou arquivo de vídeo)
+                            </p>
+                        </div>
                     </div>
+                    <!-- Replace with actual video embed:
+                    <iframe 
+                        src="YOUR_VIDEO_URL" 
+                        class="w-full h-full"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gradient-to-b from-black to-green-950/20">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 gradient-text" data-i18n="contact.title">
-                Entre em Contato
-            </h2>
-            <p class="text-center text-gray-400 mb-12" data-i18n="contact.subtitle">
-                Interessado em implementar certificados blockchain na sua instituição? Fale conosco!
-            </p>
-            <form class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800">
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2" data-i18n="contact.form.name">Nome da Instituição</label>
-                    <input type="text" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition" required>
+    <section id="contact" class="py-24 bg-gradient-to-b from-dark-blue to-black">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Entre em <span class="gradient-text">Contato</span>
+                </h2>
+                <p class="text-xl text-gray-400">
+                    Instituições interessadas, vamos conversar sobre o futuro da certificação
+                </p>
+            </div>
+            
+            <form class="bg-deep-blue/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl border-2 border-neon-green/30">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green">Nome da Instituição</label>
+                        <input 
+                            type="text" 
+                            class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            placeholder="Ex: Universidade Tech"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green">Nome do Responsável</label>
+                        <input 
+                            type="text" 
+                            class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            placeholder="Seu nome"
+                        />
+                    </div>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2" data-i18n="contact.form.email">Email</label>
-                    <input type="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition" required>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green">E-mail</label>
+                        <input 
+                            type="email" 
+                            class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            placeholder="contato@instituicao.com"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-neon-green">Telefone</label>
+                        <input 
+                            type="tel" 
+                            class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition"
+                            placeholder="(00) 00000-0000"
+                        />
+                    </div>
                 </div>
+                
                 <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2" data-i18n="contact.form.type">Tipo de Instituição</label>
-                    <select class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition" required>
-                        <option value="" data-i18n="contact.form.selectType">Selecione...</option>
-                        <option value="community" data-i18n="contact.form.community">Comunidade Tech</option>
-                        <option value="school" data-i18n="contact.form.school">Escola Técnica</option>
-                        <option value="bootcamp" data-i18n="contact.form.bootcamp">Bootcamp</option>
-                        <option value="event" data-i18n="contact.form.event">Organizador de Eventos</option>
-                        <option value="other" data-i18n="contact.form.other">Outro</option>
+                    <label class="block text-sm font-semibold mb-2 text-neon-green">Tipo de Instituição</label>
+                    <select class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition">
+                        <option>Selecione...</option>
+                        <option>Comunidade Tech</option>
+                        <option>Escola Técnica</option>
+                        <option>Bootcamp</option>
+                        <option>Universidade</option>
+                        <option>Organizador de Eventos</option>
+                        <option>Outro</option>
                     </select>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium mb-2" data-i18n="contact.form.message">Mensagem</label>
-                    <textarea rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-green-400 transition" required></textarea>
+                
+                <div class="mb-8">
+                    <label class="block text-sm font-semibold mb-2 text-neon-green">Mensagem</label>
+                    <textarea 
+                        rows="5" 
+                        class="w-full bg-black/50 border border-neon-green/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-neon-green transition resize-none"
+                        placeholder="Conte-nos sobre suas necessidades de certificação..."
+                    ></textarea>
                 </div>
-                <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-green-400 to-blue-500 text-black font-bold rounded-lg text-lg hover:scale-105 transition glow" data-i18n="contact.form.submit">
-                    Enviar Mensagem
+                
+                <button 
+                    type="submit" 
+                    class="w-full bg-neon-green text-black font-bold py-4 rounded-lg hover:bg-neon-green/90 transition text-lg border-glow"
+                >
+                    Solicitar Demonstração
                 </button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="text-3xl font-bold gradient-text mb-4">BlockEdu</div>
-            <p class="text-gray-400 mb-6" data-i18n="footer.tagline">Certificando o futuro da educação</p>
-            <div class="flex justify-center gap-6 mb-6">
-                <a href="#" class="text-gray-400 hover:text-green-400 transition">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-green-400 transition">GitHub</a>
-                <a href="#" class="text-gray-400 hover:text-green-400 transition">Discord</a>
+    <footer class="bg-dark-blue border-t border-neon-green/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-neon-green/20 rounded-lg flex items-center justify-center border border-neon-green/40">
+                        <span class="text-neon-green text-xl font-bold">B</span>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">BlockEdu</span>
+                </div>
+                
+                <p class="text-gray-400 text-center">
+                    © 2025 BlockEdu. Certificando o futuro com blockchain.
+                </p>
+                
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-neon-green transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-green transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-neon-green transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <p class="text-gray-500 text-sm" data-i18n="footer.copyright">
-                © 2025 BlockEdu. Todos os direitos reservados.
-            </p>
         </div>
     </footer>
-
-    <script>
-        //  Added bilingual support with language switcher
-        const translations = {
-            pt: {
-                "nav.how": "Como Funciona",
-                "nav.forWho": "Para Quem",
-                "nav.advantages": "Vantagens",
-                "nav.contact": "Contato",
-                "hero.title": "BlockEdu",
-                "hero.subtitle": "Simplicidade e validade. Certifique o futuro.",
-                "hero.description": "Certificados educacionais verificados na blockchain da Solana. Transparência, segurança e validade global para sua formação.",
-                "hero.cta": "Comece Agora",
-                "web3.title": "Por que Web3?",
-                "web3.card1.title": "Descentralização",
-                "web3.card1.description": "Seus certificados não dependem de uma única instituição. Eles existem na blockchain, acessíveis para sempre.",
-                "web3.card2.title": "Transparência",
-                "web3.card2.description": "Qualquer pessoa pode verificar a autenticidade de um certificado em segundos, sem intermediários.",
-                "web3.card3.title": "Inovação",
-                "web3.card3.description": "Tecnologia de ponta que coloca a educação no futuro digital, com custos baixos e velocidade alta.",
-                "how.title": "Como Funciona",
-                "how.step1.title": "Emissão",
-                "how.step1.description": "A instituição emite o certificado com dados do aluno e curso via Python SDK",
-                "how.step2.title": "Blockchain",
-                "how.step2.description": "O certificado é registrado na blockchain Solana de forma imutável e permanente",
-                "how.step3.title": "Verificação",
-                "how.step3.description": "Qualquer pessoa pode verificar a autenticidade instantaneamente via QR code ou ID",
-                "forWho.title": "Para Quem É",
-                "forWho.card1.title": "Comunidades Tech",
-                "forWho.card1.description": "Grupos de Python, JavaScript, Web3 e outras tecnologias que oferecem cursos e workshops",
-                "forWho.card2.title": "Escolas Técnicas",
-                "forWho.card2.description": "Instituições de ensino que buscam modernizar seus certificados com tecnologia blockchain",
-                "forWho.card3.title": "Organizadores de Eventos",
-                "forWho.card3.description": "Bootcamps, hackathons e conferências que querem certificar participantes de forma inovadora",
-                "advantages.title": "Vantagens",
-                "advantages.card1.title": "Segurança",
-                "advantages.card1.description": "Impossível falsificar ou alterar certificados registrados na blockchain",
-                "advantages.card2.title": "Transparência",
-                "advantages.card2.description": "Verificação pública e instantânea sem necessidade de contato com a instituição",
-                "advantages.card3.title": "Escalabilidade",
-                "advantages.card3.description": "Emita milhares de certificados com custos mínimos usando Solana",
-                "advantages.card4.title": "Python SDK",
-                "advantages.card4.description": "Integração simples com Python para desenvolvedores e educadores",
-                "market.title": "Mercado em Crescimento",
-                "market.description": "O mercado global de certificações digitais deve crescer de",
-                "market.year1": "2024",
-                "market.year2": "2032",
-                "market.cagr": "Taxa de crescimento anual composta (CAGR) de 44.2%",
-                "demo.title": "Veja Como Funciona",
-                "demo.placeholder": "Vídeo demonstrativo em breve",
-                "contact.title": "Entre em Contato",
-                "contact.subtitle": "Interessado em implementar certificados blockchain na sua instituição? Fale conosco!",
-                "contact.form.name": "Nome da Instituição",
-                "contact.form.email": "Email",
-                "contact.form.type": "Tipo de Instituição",
-                "contact.form.selectType": "Selecione...",
-                "contact.form.community": "Comunidade Tech",
-                "contact.form.school": "Escola Técnica",
-                "contact.form.bootcamp": "Bootcamp",
-                "contact.form.event": "Organizador de Eventos",
-                "contact.form.other": "Outro",
-                "contact.form.message": "Mensagem",
-                "contact.form.submit": "Enviar Mensagem",
-                "footer.tagline": "Certificando o futuro da educação",
-                "footer.copyright": "© 2025 BlockEdu. Todos os direitos reservados."
-            },
-            en: {
-                "nav.how": "How It Works",
-                "nav.forWho": "Who It's For",
-                "nav.advantages": "Advantages",
-                "nav.contact": "Contact",
-                "hero.title": "BlockEdu",
-                "hero.subtitle": "Simplicity and validity. Certify the future.",
-                "hero.description": "Educational certificates verified on the Solana blockchain. Transparency, security, and global validity for your education.",
-                "hero.cta": "Get Started",
-                "web3.title": "Why Web3?",
-                "web3.card1.title": "Decentralization",
-                "web3.card1.description": "Your certificates don't depend on a single institution. They exist on the blockchain, accessible forever.",
-                "web3.card2.title": "Transparency",
-                "web3.card2.description": "Anyone can verify the authenticity of a certificate in seconds, without intermediaries.",
-                "web3.card3.title": "Innovation",
-                "web3.card3.description": "Cutting-edge technology that puts education in the digital future, with low costs and high speed.",
-                "how.title": "How It Works",
-                "how.step1.title": "Issuance",
-                "how.step1.description": "The institution issues the certificate with student and course data via Python SDK",
-                "how.step2.title": "Blockchain",
-                "how.step2.description": "The certificate is registered on the Solana blockchain immutably and permanently",
-                "how.step3.title": "Verification",
-                "how.step3.description": "Anyone can verify authenticity instantly via QR code or ID",
-                "forWho.title": "Who It's For",
-                "forWho.card1.title": "Tech Communities",
-                "forWho.card1.description": "Python, JavaScript, Web3 groups and other technologies offering courses and workshops",
-                "forWho.card2.title": "Technical Schools",
-                "forWho.card2.description": "Educational institutions looking to modernize their certificates with blockchain technology",
-                "forWho.card3.title": "Event Organizers",
-                "forWho.card3.description": "Bootcamps, hackathons, and conferences that want to certify participants innovatively",
-                "advantages.title": "Advantages",
-                "advantages.card1.title": "Security",
-                "advantages.card1.description": "Impossible to forge or alter certificates registered on the blockchain",
-                "advantages.card2.title": "Transparency",
-                "advantages.card2.description": "Public and instant verification without needing to contact the institution",
-                "advantages.card3.title": "Scalability",
-                "advantages.card3.description": "Issue thousands of certificates with minimal costs using Solana",
-                "advantages.card4.title": "Python SDK",
-                "advantages.card4.description": "Simple integration with Python for developers and educators",
-                "market.title": "Growing Market",
-                "market.description": "The global digital certification market is projected to grow from",
-                "market.year1": "2024",
-                "market.year2": "2032",
-                "market.cagr": "Compound Annual Growth Rate (CAGR) of 44.2%",
-                "demo.title": "See How It Works",
-                "demo.placeholder": "Demo video coming soon",
-                "contact.title": "Get In Touch",
-                "contact.subtitle": "Interested in implementing blockchain certificates at your institution? Contact us!",
-                "contact.form.name": "Institution Name",
-                "contact.form.email": "Email",
-                "contact.form.type": "Institution Type",
-                "contact.form.selectType": "Select...",
-                "contact.form.community": "Tech Community",
-                "contact.form.school": "Technical School",
-                "contact.form.bootcamp": "Bootcamp",
-                "contact.form.event": "Event Organizer",
-                "contact.form.other": "Other",
-                "contact.form.message": "Message",
-                "contact.form.submit": "Send Message",
-                "footer.tagline": "Certifying the future of education",
-                "footer.copyright": "© 2025 BlockEdu. All rights reserved."
-            }
-        };
-
-        let currentLang = 'pt';
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            // Update button styles
-            document.getElementById('lang-pt').classList.toggle('active', lang === 'pt');
-            document.getElementById('lang-pt').classList.toggle('bg-gray-800', lang !== 'pt');
-            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-            document.getElementById('lang-en').classList.toggle('bg-gray-800', lang !== 'en');
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-            
-            // Update all translatable elements
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-        }
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
 
 </body>
 </html>
